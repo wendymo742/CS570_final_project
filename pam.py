@@ -151,6 +151,6 @@ if __name__ == '__main__':
     sse = 0
     for i in range(0, len(cluster)):
         index = cluster[i]
-        sse += dtw_distance(rv[0:100][i], centroids[index])
+        sse += dtw_distance(rv[0:int(sys.argv[2])][i], centroids[index])
     print(sse)    
     #print(dtw_distance(rv[0],rv[1]))
